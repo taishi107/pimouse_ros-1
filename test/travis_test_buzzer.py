@@ -48,7 +48,7 @@ class BuzzerTest(unittest.TestCase):
     def feedback_cb(self, feedback):
         with open("/dev/rtbuzzer0", "r") as f:
             data = f.readline()
-            self.device_values.append(int(rstrip()))
+            self.device_values.append(int(data.rstrip()))
 
 if __name__ == '__main__':
     time.sleep(3)
